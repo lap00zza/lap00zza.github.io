@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>lap00zza&#39;s blog</title>
+    <link>https://lap00zza.github.io/</link>
+    <description>Recent content on lap00zza&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 09 Sep 2018 22:27:23 +0530</lastBuildDate>
+    
+	<atom:link href="https://lap00zza.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GPG</title>
+      <link>https://lap00zza.github.io/gpg_key/</link>
+      <pubDate>Sun, 09 Sep 2018 22:27:23 +0530</pubDate>
+      
+      <guid>https://lap00zza.github.io/gpg_key/</guid>
+      <description>I use GPG quite a bit. Import my public key:
+$ curl &amp;quot;https://keybase.io/lapoozza/key.asc&amp;quot; | gpg --import</description>
+    </item>
+    
+    <item>
+      <title>Simple Node Server</title>
+      <link>https://lap00zza.github.io/blog/2018-09-09-simple-node-server/</link>
+      <pubDate>Sun, 09 Sep 2018 20:19:56 +0530</pubDate>
+      
+      <guid>https://lap00zza.github.io/blog/2018-09-09-simple-node-server/</guid>
+      <description>The following snippet creates a basic http server.
+const http = require(&amp;#34;http&amp;#34;); const PORT=8080; const ADDR=&amp;#34;127.0.0.1&amp;#34;; const server = http.createServer((req, res) =&amp;gt; { console.log(req.url); // Steps:  // Write Header &amp;gt; Write Body &amp;gt; End Response  res.writeHead(200, { &amp;#34;Content-Type&amp;#34;: &amp;#34;text/html&amp;#34; }); res.write(&amp;#34;&amp;lt;em&amp;gt;Hello World&amp;lt;/em&amp;gt;&amp;#34;); res.end(); }); server.listen(PORT, ADDR, () =&amp;gt; { console.log(`Listening on ${ADDR}:${PORT}`); }); </description>
+    </item>
+    
+    <item>
+      <title>License</title>
+      <link>https://lap00zza.github.io/license/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lap00zza.github.io/license/</guid>
+      <description>Please feel free to use any content from my blog.
+Content License Except where otherwise noted, my non-code content on this website is licensed under a Creative Commons BY-NC 4.0 (Creative Commons Attribution-Non Commercial 4.0).
+Code License Except where otherwise noted, my code on this website is licensed under MIT:
+ Copyright &amp;copy; 2018 Jewel Mahanta
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &amp;ldquo;Software&amp;rdquo;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</description>
+    </item>
+    
+  </channel>
+</rss>

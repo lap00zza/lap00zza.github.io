@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on lap00zza&#39;s blog</title>
+    <link>https://lap00zza.github.io/tags/</link>
+    <description>Recent content in Tags on lap00zza&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://lap00zza.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>License</title>
+      <link>https://lap00zza.github.io/tags/license/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lap00zza.github.io/tags/license/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

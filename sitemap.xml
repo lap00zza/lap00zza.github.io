@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://lap00zza.github.io/gpg_key/</loc>
+    <lastmod>2018-09-09T22:27:23+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lap00zza.github.io/blog/2018-09-09-simple-node-server/</loc>
+    <lastmod>2018-09-09T20:19:56+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lap00zza.github.io/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lap00zza.github.io/tags/license/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lap00zza.github.io/license/</loc>
+  </url>
+  
+  <url>
+    <loc>https://lap00zza.github.io/post/</loc>
+    <lastmod>2018-09-09T20:19:56+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lap00zza.github.io/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lap00zza.github.io/</loc>
+    <lastmod>2018-09-09T22:27:23+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
