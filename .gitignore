@@ -1,5 +1,5 @@
-./hugo.yaml
-./.hugo_build.lock
+hugo.yaml
+.hugo_build.lock
 layouts/
 static/
 themes/
