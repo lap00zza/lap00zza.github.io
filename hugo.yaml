@@ -127,8 +127,8 @@ params:
     intro: "Hi, my name is"
     title: "Jewel."
     subtitle: "I am an Educator."
-    content: "Teaching is my passion. I sometimes build things for fun. Programming and embedded systems are 
-    my hobby. I also dabble in a little bit of chess and running!"
+    content: "Teaching STEM is my passion. I sometimes build things for fun. Programming and embedded systems 
+    are my hobby. I also dabble in a little bit of chess and running!"
     image: /images/hero.svg
     bottomImage:
       enable: true
@@ -161,7 +161,7 @@ params:
     title: "About Me"
     image: "/images/me.png"
     content: |-
-      I am a Educator based in the Guwahati, Assam (North-eastern India). I believe that quality education 
+      I am an Educator based in Guwahati, Assam (North-eastern India). I believe that quality education 
       is a basic human right. My goal is to make STEM (Science, Technology, Engineering and Maths) accessible 
       to as many people as I can.
 
@@ -169,10 +169,10 @@ params:
       enable: true
       title: "Here are a few skills that I am proficient at:"
       items:
-        - "HTML"
-        - "CSS/SASS"
+        - "HTML/CSS"
+        - "Python"
         - "JavaScript"
-        - "Node"
+        - "NodeJS"
         - "C/C++"
         - "ESP32"
         - "IOT"
