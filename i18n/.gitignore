@@ -1,0 +1,9 @@
+./hugo.yaml
+./.hugo_build.lock
+layouts/
+static/
+themes/
+data/
+content/
+assets/
+archetypes/
