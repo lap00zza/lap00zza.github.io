@@ -145,6 +145,8 @@ params:
           url: https://github.com/lap00zza
         - icon: fab fa-gitlab
           url: https://gitlab.com/lap00zza
+        - icon: fab fa-npm
+          url: https://www.npmjs.com/~lap00zza
         - icon: fab fa-strava
           url: https://www.strava.com/athletes/128625796
         - icon: fab fa-instagram
@@ -375,11 +377,11 @@ params:
       title: Recent Posts
       enable: true
       disableFeaturedImage: false
-    socialNetworks:
-      github: https://github.com/lap00zza
-      gitlab: https://gitlab.com/lap00zza
-      instagram: https://www.instagram.com/jewelmahanta
-      strava: https://www.strava.com/athletes/128625796
+    # socialNetworks:
+    #   github: https://github.com/lap00zza
+    #   gitlab: https://gitlab.com/lap00zza
+    #   instagram: https://www.instagram.com/jewelmahanta
+    #   strava: https://www.strava.com/athletes/128625796
 
   # List pages like blogs and posts
   listPages:
