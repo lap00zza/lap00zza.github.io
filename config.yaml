@@ -28,13 +28,18 @@ Menus:
     - identifier: blog
       name: Blog
       title: Blog posts
-      url: /blogs
+      url: /blog/
       weight: 1
-    - identifier: gallery
-      name: Gallery
-      title: Blog posts
-      url: /gallery
+    - identifier: gpg
+      name: GPG
+      title: GPG Public Key
+      url: /gpg.pub.txt
       weight: 2
+    # - identifier: gallery
+    #   name: Gallery
+    #   title: Blog posts
+    #   url: /gallery
+    #   weight: 2
     #Dropdown menu
     # - identifier: dropdown
     #   title: Example dropdown menu
@@ -127,8 +132,8 @@ params:
     intro: "Hi, my name is"
     title: "Jewel."
     subtitle: "I am an Educator."
-    content: "Teaching STEM is my passion. I sometimes build things for fun. Programming and embedded systems 
-    are my hobby. I also dabble in a little bit of chess and running!"
+    content: "Teaching STEM is my passion. Programming and embedded systems are my hobby. I post interesting things about my
+    projects and experiences. Have a good day!"
     image: /images/hero.svg
     bottomImage:
       enable: true
@@ -171,11 +176,12 @@ params:
       items:
         - "HTML/CSS"
         - "Python"
-        - "JavaScript"
+        - "JS"
         - "NodeJS"
         - "C/C++"
         - "ESP32"
-        - "IOT"
+        - "Docker"
+        - "Git"
 
   # Experience
   # experience:
@@ -364,16 +370,11 @@ params:
     content: My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
     email: jewelmahanta@gmail.com
     btnName: Mail me
-    # formspree:
-    #   enable: true # `contact.email` value will be ignored
-    #   formId: abcdefgh # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
-    #   emailCaption: "Enter your email address"
-    #   messageCaption: "Enter your message here"
 
   footer:
     recentPosts:
-      path: "blogs"
-      count: 3
+      path: "blog"
+      count: 4
       title: Recent Posts
       enable: true
       disableFeaturedImage: false

@@ -2,10 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://lap00zza.github.io/blog/</loc>
+    <lastmod>2024-03-11T17:38:36+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://lap00zza.github.io/</loc>
+    <lastmod>2024-03-11T17:38:36+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://lap00zza.github.io/blog/linux_journey/</loc>
+    <lastmod>2024-03-11T17:38:36+05:30</lastmod>
+  </url><url>
+    <loc>https://lap00zza.github.io/categories/</loc>
+  </url><url>
+    <loc>https://lap00zza.github.io/tags/</loc>
   </url>
 </urlset>
