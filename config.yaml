@@ -33,7 +33,7 @@ Menus:
     - identifier: gpg
       name: GPG
       title: GPG Public Key
-      url: /gpg.asc
+      url: /gpg_pub.txt
       weight: 2
     # - identifier: gallery
     #   name: Gallery
