@@ -161,7 +161,7 @@ params:
   about:
     enable: true
     title: "About Me"
-    image: "/me.png"
+    image: "/images/me.png"
     content: |-
       I am based in Guwahati, India. I believe that quality education is a basic human right. 
       My goal is to make STEM (Science, Technology, Engineering and Maths) accessible to as 
