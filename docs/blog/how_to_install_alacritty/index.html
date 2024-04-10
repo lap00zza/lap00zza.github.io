@@ -39,15 +39,19 @@ if (!doNotTrack) {
 }
 </script>
 
-<meta property="og:title" content="Blogs" />
-<meta property="og:description" content="This is my personal site where I share interesting things that I am working on." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://lap00zza.github.io/blog/" /><meta property="og:site_name" content="Jewel Mahanta" />
+<meta property="og:title" content="How to install Alacritty in Linux Mint" />
+<meta property="og:description" content="I recently switched to Alacritty on my laptop and wanted to share how to get it up and running. Alacritty, much like kitty and wezterm, is a GPU accelerated terminal emulator. It is also the lightest and the fastest among the three and it plays well with TMUX which is a must for me.
+        Screenshot of my terminal    Install Steps Alacritty is not in APT so we can&rsquo;t simply do apt install alacritty." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lap00zza.github.io/blog/how_to_install_alacritty/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2024-04-09T09:53:13+05:30" />
+<meta property="article:modified_time" content="2024-04-09T09:53:13+05:30" /><meta property="og:site_name" content="Jewel Mahanta" />
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Blogs"/>
-<meta name="twitter:description" content="This is my personal site where I share interesting things that I am working on."/>
+<meta name="twitter:title" content="How to install Alacritty in Linux Mint"/>
+<meta name="twitter:description" content="I recently switched to Alacritty on my laptop and wanted to share how to get it up and running. Alacritty, much like kitty and wezterm, is a GPU accelerated terminal emulator. It is also the lightest and the fastest among the three and it plays well with TMUX which is a must for me.
+        Screenshot of my terminal    Install Steps Alacritty is not in APT so we can&rsquo;t simply do apt install alacritty."/>
 
 
 <link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
@@ -110,11 +114,14 @@ if (!doNotTrack) {
     }
 </style>
 
-<meta name="description" content="Blogs of Jewel Mahanta">
-<link rel="stylesheet" href="/css/list.css" media="all">
+<meta name="description" content="">
+<link rel="stylesheet" href="/css/single.css">
+
+
+<script defer src="/fontawesome-6/all-6.4.2.js"></script>
 
   <title>
-Blogs | Jewel Mahanta
+How to install Alacritty in Linux Mint | Jewel Mahanta
 
   </title>
 </head>
@@ -286,57 +293,225 @@ Blogs | Jewel Mahanta
     </nav>
 </header>
 <div id="content">
-<div class="container pt-5" id="list-page">
-    <h2 class="text-center pb-2">Blogs</h2>
-    <div class="row">
-        
-        <div class="col-lg-4 col-md-6 my-3">
-            <div class="card-columns">
-                <div class="card h-100">
-                    
-                    <div class="card-body bg-transparent p-4 shadow-sm">
-                        <a href="/blog/how_to_install_alacritty/" class="primary-font card-title">
-                            <h5 class="card-title bg-transparent" title="How to install Alacritty in Linux Mint">How to install Alacritty …</h5>
-                        </a>
-                        <div class="card-text secondary-font">
-                            <p>I recently switched to Alacritty on my laptop and wanted to share how to get it up and running. Alacritty, much like kitty and wezterm, is a GPU accelerated terminal emulator. It is also the lightest and the fastest among the three and it plays well with TMUX which is a must for me. …</p>
-                        </div>
-                    </div>
-                    <div class="mt-auto post-footer bg-transparent py-3">
-                        <span class="float-start bg-transparent">Apr 9, 2024</span>
-                        <a href="/blog/how_to_install_alacritty/" class="float-end btn btn-outline-info btn-sm">Read</a>
-                    </div>
-                </div>
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">How to install Alacritty in Linux Mint</h1>
+            <div class="text-center">
+               
+              <small>|</small>
+              Apr 9, 2024
+
+              
+              <span id="readingTime">
+                min read
+              </span>
+              
             </div>
+          </div>
+          
+          <article class="page-content  p-2">
+          <p>I recently switched to Alacritty on my laptop and wanted to share how to get it up and running.
+<a href="https://alacritty.org/">Alacritty</a>, much like <a href="https://sw.kovidgoyal.net/kitty">kitty</a> and
+<a href="https://wezfurlong.org/wezterm/index.html">wezterm</a>, is a <em>GPU accelerated</em> terminal emulator.
+It is also the lightest and the fastest among the three and it plays well with TMUX which is a
+must for me.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="https://devbook.jmahanta.in/s/alacritty_on_mint.png" alt=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><em>Screenshot of my terminal</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="install-steps">Install Steps</h2>
+<p>Alacritty is not in APT so we can&rsquo;t simply do <code>apt install alacritty</code>. Alacritty also does
+not provide binaries for linux. So we will have to manually build the binary from the source
+code.</p>
+<h3 id="step-1---installing-rust">Step 1 - Installing Rust</h3>
+<p>Alacritty is written in rust so it will need a working rust compiler. We will use
+<a href="https://rustup.rs/">rustup.rs</a> to install and manage rust. Open up your terminal
+<code>(Ctrl + Alt + T)</code> and start by doing:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo apt update
+</code></pre></div><p>then,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># Install rust</span>
+curl --proto <span style="color:#e6db74">&#39;=https&#39;</span> --tlsv1.2 -sSf https://sh.rustup.rs | sh
+</code></pre></div><p><strong>Choose default while installing</strong>. Once you are done, do:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">rustup override set stable
+rustup update stable
+</code></pre></div><h3 id="step-2---dependencies">Step 2 - Dependencies</h3>
+<p>Alacritty also needs a few other libraries before we can build. Let&rsquo;s get those:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo apt install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
+</code></pre></div><h3 id="step-3---download-the-source-code">Step 3 - Download the source code</h3>
+<p>Now we have everything we need to build our own Alacritty binary. We just need the source code. Let&rsquo;s get that:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">cd ~
+git clone https://github.com/alacritty/alacritty.git
+cd alacritty
+</code></pre></div><p><em>This will place alacritty in your HOME_FOLDER/alacritty</em></p>
+<h3 id="step-4---lets-start-building">Step 4 - Let&rsquo;s start building!</h3>
+<p><strong>For the following steps please stay in the alacritty directory.</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">cargo build --release
+</code></pre></div><p>This step usually takes a while. Once this is done, we are ready to move onto the final steps:</p>
+<h4 id="adding-alacritty-to-terminfo">Adding Alacritty to terminfo</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">infocmp alacritty
+</code></pre></div><p>If this returns without any errors, we can move on to the next step. Otherwise run the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo tic -xe alacritty,alacritty-direct extra/alacritty.info
+</code></pre></div><h4 id="desktop-entry">Desktop entry</h4>
+<p>To add alacritty to your desktop menu, do:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo cp target/release/alacritty /usr/local/bin <span style="color:#75715e"># or anywhere else in $PATH</span>
+sudo cp extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg
+sudo desktop-file-install extra/linux/Alacritty.desktop
+sudo update-desktop-database
+</code></pre></div><h4 id="manual-page">Manual Page</h4>
+<p>This lets you do <code>man alacritty</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo mkdir -p /usr/local/share/man/man1
+sudo mkdir -p /usr/local/share/man/man5
+scdoc &lt; extra/man/alacritty.1.scd | gzip -c | sudo tee /usr/local/share/man/man1/alacritty.1.gz &gt; /dev/null
+scdoc &lt; extra/man/alacritty-msg.1.scd | gzip -c | sudo tee /usr/local/share/man/man1/alacritty-msg.1.gz &gt; /dev/null
+scdoc &lt; extra/man/alacritty.5.scd | gzip -c | sudo tee /usr/local/share/man/man5/alacritty.5.gz &gt; /dev/null
+scdoc &lt; extra/man/alacritty-bindings.5.scd | gzip -c | sudo tee /usr/local/share/man/man5/alacritty-bindings.5.gz &gt; /dev/null
+</code></pre></div><h4 id="shell-completions">Shell Completions</h4>
+<p><strong>Bash</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">mkdir -p ~/.bash_completion
+cp extra/completions/alacritty.bash ~/.bash_completion/alacritty
+echo <span style="color:#e6db74">&#34;source ~/.bash_completion/alacritty&#34;</span> &gt;&gt; ~/.bashrc
+</code></pre></div><p><strong>Congrats! you are finally done. You can open Alacritty by going to your menu and finding the entry. Have fun tinkering.</strong></p>
+<p>To customize Alacritty we need a <code>.alacritty.toml</code> file (which can be placed in the home directory).
+If you want to see my file you can check out my <a href="https://github.com/lap00zza/dotfiles">dotfiles</a>.</p>
+
+          </article>
         </div>
-        
-        <div class="col-lg-4 col-md-6 my-3">
-            <div class="card-columns">
-                <div class="card h-100">
-                    
-                    <div class="card-body bg-transparent p-4 shadow-sm">
-                        <a href="/blog/linux_journey/" class="primary-font card-title">
-                            <h5 class="card-title bg-transparent" title="My Linux Journey">My Linux Journey</h5>
-                        </a>
-                        <div class="card-text secondary-font">
-                            <p>I have been a long time linux user (10+ years). My fascination with linux began in 11th grade when I stumbled upon the Github Student Developer Pack. I was already interested in programming by then but this gave me access to a whole new world. And ofcourse, a VPS was one of them. Oh boy was I …</p>
-                        </div>
-                    </div>
-                    <div class="mt-auto post-footer bg-transparent py-3">
-                        <span class="float-start bg-transparent">Mar 11, 2024</span>
-                        <a href="/blog/linux_journey/" class="float-end btn btn-outline-info btn-sm">Read</a>
-                    </div>
-                </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div id="stickySideBar" class="sticky-sidebar">
+          
+          <aside class="toc">
+              <h5>
+                Table Of Contents
+              </h5>
+              <div class="toc-content">
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#install-steps">Install Steps</a>
+      <ul>
+        <li><a href="#step-1---installing-rust">Step 1 - Installing Rust</a></li>
+        <li><a href="#step-2---dependencies">Step 2 - Dependencies</a></li>
+        <li><a href="#step-3---download-the-source-code">Step 3 - Download the source code</a></li>
+        <li><a href="#step-4---lets-start-building">Step 4 - Let&rsquo;s start building!</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+              </div>
+          </aside>
+          
+
+          
+
+          
+          <aside class="social">
+            <h5>Social</h5>
+            <div class="social-content">
+              <ul class="list-inline">
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://twitter.com/share?text=How%20to%20install%20Alacritty%20in%20Linux%20Mint&url=https%3a%2f%2flap00zza.github.io%2fblog%2fhow_to_install_alacritty%2f">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=How%20to%20install%20Alacritty%20in%20Linux%20Mint: https%3a%2f%2flap00zza.github.io%2fblog%2fhow_to_install_alacritty%2f">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href='mailto:?subject=How%20to%20install%20Alacritty%20in%20Linux%20Mint&amp;body=Check%20out%20this%20site https%3a%2f%2flap00zza.github.io%2fblog%2fhow_to_install_alacritty%2f'>
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </li>
+              </ul>
             </div>
+          </aside>
+          
         </div>
-        
-        <div class="row justify-content-center">
-            <div class="col-auto m-3">
-                
-            </div>
-        </div>
+      </div>
     </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "lap00zza" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </div>
+    </div>
+  </div>
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+    <i class="fas fa-angle-up"></i>
+  </button>
+</section>
+
+
+<div class="progress">
+  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
+<Script src="/js/scrollProgressBar.js"></script>
+
+
+<script>
+  var topScroll = document.getElementById("topScroll");
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topScroll.style.display = "block";
+    } else {
+      topScroll.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
+  
+  let stickySideBarElem = document.getElementById("stickySideBar");
+  let stickyNavBar =  true ;
+  if(stickyNavBar) {
+    let headerElem = document.getElementById("profileHeader");
+    let headerHeight = headerElem.offsetHeight + 15;
+    stickySideBarElem.style.top = headerHeight + "px";
+  } else {
+    stickySideBarElem.style.top = "50px";
+  }
+</script>
+
+
+<script src="/js/readingTime.js"></script>
+
+
 
   </div><footer>
     

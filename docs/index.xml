@@ -6,7 +6,17 @@
     <description>Recent content on Jewel Mahanta</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Mar 2024 17:38:36 +0530</lastBuildDate><atom:link href="https://lap00zza.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 09 Apr 2024 09:53:13 +0530</lastBuildDate><atom:link href="https://lap00zza.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to install Alacritty in Linux Mint</title>
+      <link>https://lap00zza.github.io/blog/how_to_install_alacritty/</link>
+      <pubDate>Tue, 09 Apr 2024 09:53:13 +0530</pubDate>
+      
+      <guid>https://lap00zza.github.io/blog/how_to_install_alacritty/</guid>
+      <description>I recently switched to Alacritty on my laptop and wanted to share how to get it up and running. Alacritty, much like kitty and wezterm, is a GPU accelerated terminal emulator. It is also the lightest and the fastest among the three and it plays well with TMUX which is a must for me.
+        Screenshot of my terminal    Install Steps Alacritty is not in APT so we can&amp;rsquo;t simply do apt install alacritty.</description>
+    </item>
+    
     <item>
       <title>My Linux Journey</title>
       <link>https://lap00zza.github.io/blog/linux_journey/</link>

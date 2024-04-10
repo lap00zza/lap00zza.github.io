@@ -63,6 +63,7 @@ params:
   description: "This is my personal site where I share interesting things that I am working on."
   # staticPath: ""  # The path to serve the static files from
   favicon: "/favicon.png"
+  # copyright: "Jewel Mahanta"
 
   # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
   # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
@@ -361,7 +362,7 @@ params:
     enable: true
     # title: "Custom Name"
     content: My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
-    email: jewelmahanta@gmail.com
+    email: hi@jmahanta.in
     btnName: Mail me
 
   footer:

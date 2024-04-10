@@ -80,7 +80,7 @@
     max-width: 100%;
     display: block;
     overflow-x: auto;
-    opacity: 0.8;
+    /* opacity: 0.8; */
 }
 
 #single .page-content table > tr {
@@ -89,7 +89,7 @@
 
 #single .page-content table > thead > tr > th {
     padding: 0.5rem !important;
-    background-color: var(--primary-color) !important;
+    /* background-color: var(--primary-color) !important; */
     color: var(--secondary-color) !important;
     border: 1px solid var(--secondary-color);
     opacity: 0.9;
