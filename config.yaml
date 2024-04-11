@@ -1,4 +1,4 @@
-baseURL: "https://lap00zza.github.io/"
+baseURL: "https://jmahanta.in/"
 languageCode: "en-us"
 title: "Jewel Mahanta"
 theme: hugo-profile
@@ -161,7 +161,7 @@ params:
   about:
     enable: true
     title: "About Me"
-    image: "/images/me.png"
+    image: "/images/me.webp"
     content: |-
       I am based in Guwahati, India. I believe that quality education is a basic human right. 
       My goal is to make STEM (Science, Technology, Engineering and Maths) accessible to as 

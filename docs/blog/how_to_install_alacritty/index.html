@@ -43,7 +43,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="I recently switched to Alacritty on my laptop and wanted to share how to get it up and running. Alacritty, much like kitty and wezterm, is a GPU accelerated terminal emulator. It is also the lightest and the fastest among the three and it plays well with TMUX which is a must for me.
         Screenshot of my terminal    Install Steps Alacritty is not in APT so we can&rsquo;t simply do apt install alacritty." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://lap00zza.github.io/blog/how_to_install_alacritty/" /><meta property="article:section" content="blog" />
+<meta property="og:url" content="https://jmahanta.in/blog/how_to_install_alacritty/" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2024-04-09T09:53:13+05:30" />
 <meta property="article:modified_time" content="2024-04-09T09:53:13+05:30" /><meta property="og:site_name" content="Jewel Mahanta" />
 
@@ -322,7 +322,7 @@ must for me.</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center"><img src="/images/alacritty_on_mint.png" alt=""></th>
+<th style="text-align:center"><img src="/images/alacritty_on_mint.webp" alt="alacritty on mint"></th>
 </tr>
 </thead>
 <tbody>
@@ -354,8 +354,8 @@ rustup update stable
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">cd ~
 git clone https://github.com/alacritty/alacritty.git
 cd alacritty
-</code></pre></div><p><em>This will place alacritty in your HOME_FOLDER/alacritty</em></p>
-<h3 id="step-4---lets-start-building">Step 4 - Let&rsquo;s start building!</h3>
+</code></pre></div><p>This will place alacritty in your HOME_FOLDER/alacritty</p>
+<h3 id="step-4---lets-start-building">Step 4 - Let&rsquo;s start building</h3>
 <p><strong>For the following steps please stay in the alacritty directory.</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">cargo build --release
 </code></pre></div><p>This step usually takes a while. Once this is done, we are ready to move onto the final steps:</p>
@@ -378,7 +378,7 @@ scdoc &lt; extra/man/alacritty-msg.1.scd | gzip -c | sudo tee /usr/local/share/m
 scdoc &lt; extra/man/alacritty.5.scd | gzip -c | sudo tee /usr/local/share/man/man5/alacritty.5.gz &gt; /dev/null
 scdoc &lt; extra/man/alacritty-bindings.5.scd | gzip -c | sudo tee /usr/local/share/man/man5/alacritty-bindings.5.gz &gt; /dev/null
 </code></pre></div><h4 id="shell-completions">Shell Completions</h4>
-<p><strong>Bash</strong></p>
+<p>Bash</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">mkdir -p ~/.bash_completion
 cp extra/completions/alacritty.bash ~/.bash_completion/alacritty
 echo <span style="color:#e6db74">&#34;source ~/.bash_completion/alacritty&#34;</span> &gt;&gt; ~/.bashrc
@@ -404,7 +404,7 @@ If you want to see my file you can check out my <a href="https://github.com/lap0
         <li><a href="#step-1---installing-rust">Step 1 - Installing Rust</a></li>
         <li><a href="#step-2---dependencies">Step 2 - Dependencies</a></li>
         <li><a href="#step-3---download-the-source-code">Step 3 - Download the source code</a></li>
-        <li><a href="#step-4---lets-start-building">Step 4 - Let&rsquo;s start building!</a></li>
+        <li><a href="#step-4---lets-start-building">Step 4 - Let&rsquo;s start building</a></li>
       </ul>
     </li>
   </ul>
@@ -421,17 +421,17 @@ If you want to see my file you can check out my <a href="https://github.com/lap0
             <div class="social-content">
               <ul class="list-inline">
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://twitter.com/share?text=How%20to%20install%20Alacritty%20in%20Linux%20Mint&url=https%3a%2f%2flap00zza.github.io%2fblog%2fhow_to_install_alacritty%2f">
+                  <a target="_blank" href="https://twitter.com/share?text=How%20to%20install%20Alacritty%20in%20Linux%20Mint&url=https%3a%2f%2fjmahanta.in%2fblog%2fhow_to_install_alacritty%2f">
                     <i class="fab fa-twitter"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://api.whatsapp.com/send?text=How%20to%20install%20Alacritty%20in%20Linux%20Mint: https%3a%2f%2flap00zza.github.io%2fblog%2fhow_to_install_alacritty%2f">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=How%20to%20install%20Alacritty%20in%20Linux%20Mint: https%3a%2f%2fjmahanta.in%2fblog%2fhow_to_install_alacritty%2f">
                     <i class="fab fa-whatsapp"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href='mailto:?subject=How%20to%20install%20Alacritty%20in%20Linux%20Mint&amp;body=Check%20out%20this%20site https%3a%2f%2flap00zza.github.io%2fblog%2fhow_to_install_alacritty%2f'>
+                  <a target="_blank" href='mailto:?subject=How%20to%20install%20Alacritty%20in%20Linux%20Mint&amp;body=Check%20out%20this%20site https%3a%2f%2fjmahanta.in%2fblog%2fhow_to_install_alacritty%2f'>
                     <i class="fa fa-envelope"></i>
                   </a>
                 </li>
@@ -578,7 +578,7 @@ If you want to see my file you can check out my <a href="https://github.com/lap0
     <div class="row justify-content-center">
         <div class="col-md-4 text-center">
             <div class="pb-2">
-                <a href="https://lap00zza.github.io/" title="Jewel Mahanta">
+                <a href="https://jmahanta.in/" title="Jewel Mahanta">
                     <img alt="Footer logo" src="/favicon.png"
                         height="40px" width="40px">
                 </a>
