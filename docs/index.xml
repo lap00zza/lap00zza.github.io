@@ -8,11 +8,11 @@
     <language>en-us</language>
     <lastBuildDate>Thu, 25 Apr 2024 22:21:50 +0530</lastBuildDate><atom:link href="https://jmahanta.in/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>SSD1306 (7 pin SPI)</title>
-      <link>https://jmahanta.in/blog/ssd1306/</link>
+      <title>SSD1306 7 pin (SPI)</title>
+      <link>https://jmahanta.in/blog/ssd1306_7pin_spi/</link>
       <pubDate>Thu, 25 Apr 2024 22:21:50 +0530</pubDate>
       
-      <guid>https://jmahanta.in/blog/ssd1306/</guid>
+      <guid>https://jmahanta.in/blog/ssd1306_7pin_spi/</guid>
       <description>I am currently working on a new project and wanted to add a display. After searching for some decent (and cheap) displays I ordered myself a SSD1306 (specifically this one).
         SSD1306 7 PIN (SPI)    This specific display comes with SPI enabled by default (and we can set it up for I2C if we want). Since I had a pretty hard time trying setting it up with ESP-IDF, I figured I would share what I did.</description>
     </item>
