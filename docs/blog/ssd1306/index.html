@@ -39,15 +39,19 @@ if (!doNotTrack) {
 }
 </script>
 
-<meta property="og:title" content="404 Page not found" />
-<meta property="og:description" content="This is my personal site where I share interesting things that I am working on." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://jmahanta.in/404.html" /><meta property="og:site_name" content="Jewel Mahanta" />
+<meta property="og:title" content="SSD1306 (7 pin SPI)" />
+<meta property="og:description" content="I am currently working on a new project and wanted to add a display. After searching for some decent (and cheap) displays I ordered myself a SSD1306 (specifically this one).
+        SSD1306 7 PIN (SPI)    This specific display comes with SPI enabled by default (and we can set it up for I2C if we want). Since I had a pretty hard time trying setting it up with ESP-IDF, I figured I would share what I did." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jmahanta.in/blog/ssd1306/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2024-04-25T22:21:50+05:30" />
+<meta property="article:modified_time" content="2024-04-25T22:21:50+05:30" /><meta property="og:site_name" content="Jewel Mahanta" />
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="404 Page not found"/>
-<meta name="twitter:description" content="This is my personal site where I share interesting things that I am working on."/>
+<meta name="twitter:title" content="SSD1306 (7 pin SPI)"/>
+<meta name="twitter:description" content="I am currently working on a new project and wanted to add a display. After searching for some decent (and cheap) displays I ordered myself a SSD1306 (specifically this one).
+        SSD1306 7 PIN (SPI)    This specific display comes with SPI enabled by default (and we can set it up for I2C if we want). Since I had a pretty hard time trying setting it up with ESP-IDF, I figured I would share what I did."/>
 
 
 <link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
@@ -110,10 +114,14 @@ if (!doNotTrack) {
     }
 </style>
 
-<meta name="description" content=This&#32;is&#32;my&#32;personal&#32;site&#32;where&#32;I&#32;share&#32;interesting&#32;things&#32;that&#32;I&#32;am&#32;working&#32;on.>
+<meta name="description" content="">
+<link rel="stylesheet" href="/css/single.css">
+
+
+<script defer src="/fontawesome-6/all-6.4.2.js"></script>
 
   <title>
-Jewel Mahanta | Page not found
+SSD1306 (7 pin SPI) | Jewel Mahanta
 
   </title>
 </head>
@@ -285,10 +293,218 @@ Jewel Mahanta | Page not found
     </nav>
 </header>
 <div id="content">
-<div class="container py-5 text-center">
-    <img src="/404.png" alt='Page not found' class="img-fluid" width="40%">
-    <h1>Page not found</h1>
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">SSD1306 (7 pin SPI)</h1>
+            <div class="text-center">
+               
+              <small>|</small>
+              Apr 25, 2024
+
+              
+              <span id="readingTime">
+                min read
+              </span>
+              
+            </div>
+          </div>
+          
+          <article class="page-content  p-2">
+          <p>I am currently working on a new project and wanted to add a display. After searching for some decent (and cheap) displays I ordered myself a SSD1306 (<a href="https://robu.in/product/0-96-oled-display-module-spii2c-128x64-7-pin-blue/">specifically this one</a>).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="https://esphome.io/_images/ssd1306-full.jpg" alt="SSD1306"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><em>SSD1306 7 PIN (SPI)</em></td>
+</tr>
+</tbody>
+</table>
+<p>This specific display comes with SPI enabled by default (and we can set it up for I2C if we want). Since I had a pretty hard time trying setting it up with ESP-IDF, I figured I would share what I did.</p>
+<h2 id="how-to-set-it-up">How to set it up?</h2>
+<p>My first attempt at interfacing this display was using <a href="https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/peripherals/lcd.html"><code>esp_lcd</code></a> api provided by IDF. It has built in support for the SSD1306. However, even after hours and hours of wrecking my brain, reading through documentation, looking at examples, asking people on reddit and discord I was unable to get this to work in SPI. Another issue was that the vast majority of all examples floating around were in I2C. I realized that this is probably beyond me for the time being.</p>
+<p>My next attempt at interfacing this display was using to simply switch to Arduino IDE and use the excellent <a href="https://github.com/adafruit/Adafruit_SSD1306">Adafruit_SSD1306</a> library. If I still couldn&rsquo;t get anything on the display it means that I need to replace it. Luckily, I was able to find some example code and finally got my display to work! Phew.</p>
+<p>But how do I get this to work with IDF? After searching around for a while, I was able to find this library: <a href="https://github.com/nopnop2002/esp-idf-ssd1306">esp_idf-ssd1306</a>. The process to set this library for your own project is as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># we clone this library to ~/esp-idf-ssd1306</span>
+$ cd ~
+$ git clone https://github.com/nopnop2002/esp-idf-ssd1306.git
+$ cd  /path/to/esp/project
+<span style="color:#75715e"># copy the components folder to the root of our project</span>
+$ cp -r ~/esp-idf-ssd1306/components ./
+$ xed CMakeLists.txt <span style="color:#75715e"># or any text editor</span>
+</code></pre></div><p>add this line to the opened file</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmake" data-lang="cmake"><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>cmake_minimum_required(<span style="color:#e6db74">VERSION</span> <span style="color:#e6db74">3.16</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># &lt;---- THIS LINE -----&gt;
+</span><span style="color:#75715e"></span>set(<span style="color:#e6db74">EXTRA_COMPONENT_DIRS</span> <span style="color:#e6db74">./components/ssd1306</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># &lt;---- LINES BELOW ARE AUTO GENERATED SO DON&#39;T TOUCH ---&gt;
+</span><span style="color:#75715e"></span>include(<span style="color:#f92672">$ENV{</span>IDF_PATH<span style="color:#f92672">}</span><span style="color:#e6db74">/tools/cmake/project.cmake</span>)<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>project(<span style="color:#e6db74">PROJECT_NAME</span>)<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>Once you are done, you will have to open up the esp-idf terminal and do <code>idf.py menuconfig</code>. Scroll down to the <code>SSD1306 Configuration</code> option and select the Interface, Pins and Host:</p>
+<p><img src="/images/menuconfig_1.png" alt="menuconfig 1"></p>
+<p><img src="/images/menuconfig_2.png" alt="menuconfig 2"></p>
+<p><img src="/images/menuconfig_3.png" alt="menuconfig 3"></p>
+<p>And you are set. Now you can just <code>#import ssd1306.h</code> and tinker around! Below is a minimal piece of code to get you started:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;ssd1306.h&#34;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>) {
+    SSD1306_t display_ssd1306;
+    spi_master_init(<span style="color:#f92672">&amp;</span>display_ssd1306, CONFIG_MOSI_GPIO, CONFIG_SCLK_GPIO,
+                CONFIG_CS_GPIO, CONFIG_DC_GPIO, CONFIG_RESET_GPIO);
+    ssd1306_init(<span style="color:#f92672">&amp;</span>display_ssd1306, <span style="color:#ae81ff">128</span>, <span style="color:#ae81ff">64</span>);
+    ssd1306_clear_screen(<span style="color:#f92672">&amp;</span>display_ssd1306, false);
+    ssd1306_contrast(<span style="color:#f92672">&amp;</span>display_ssd1306, <span style="color:#ae81ff">0xff</span>);
+
+    ssd1306_display_text3(<span style="color:#f92672">&amp;</span>display_ssd1306, <span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#34;Hello&#34;</span>, <span style="color:#ae81ff">5</span>, false);
+    ssd1306_display_text(<span style="color:#f92672">&amp;</span>display_ssd1306, <span style="color:#ae81ff">5</span>, <span style="color:#e6db74">&#34;World!&#34;</span>, <span style="color:#ae81ff">6</span>, false);
+    <span style="color:#66d9ef">while</span> (<span style="color:#ae81ff">1</span>) {
+        <span style="color:#75715e">// do stuff
+</span><span style="color:#75715e"></span>    }
+}
+</code></pre></div><p>Good luck!</p>
+
+          </article>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div id="stickySideBar" class="sticky-sidebar">
+          
+          <aside class="toc">
+              <h5>
+                Table Of Contents
+              </h5>
+              <div class="toc-content">
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#how-to-set-it-up">How to set it up?</a></li>
+  </ul>
+</nav>
+              </div>
+          </aside>
+          
+
+          
+          <aside class="tags">
+            <h5>Tags</h5>
+            <ul class="tags-ul list-unstyled list-inline">
+              
+              <li class="list-inline-item"><a href="https://jmahanta.in/tags/esp32" target="_blank">esp32</a></li>
+              
+              <li class="list-inline-item"><a href="https://jmahanta.in/tags/ssd1306" target="_blank">ssd1306</a></li>
+              
+              <li class="list-inline-item"><a href="https://jmahanta.in/tags/esp-idf" target="_blank">esp-idf</a></li>
+              
+              <li class="list-inline-item"><a href="https://jmahanta.in/tags/spi" target="_blank">spi</a></li>
+              
+            </ul>
+          </aside>
+          
+
+          
+          <aside class="social">
+            <h5>Social</h5>
+            <div class="social-content">
+              <ul class="list-inline">
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://twitter.com/share?text=SSD1306%20%287%20pin%20SPI%29&url=https%3a%2f%2fjmahanta.in%2fblog%2fssd1306%2f">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=SSD1306%20%287%20pin%20SPI%29: https%3a%2f%2fjmahanta.in%2fblog%2fssd1306%2f">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href='mailto:?subject=SSD1306%20%287%20pin%20SPI%29&amp;body=Check%20out%20this%20site https%3a%2f%2fjmahanta.in%2fblog%2fssd1306%2f'>
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "lap00zza" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </div>
+    </div>
+  </div>
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+    <i class="fas fa-angle-up"></i>
+  </button>
+</section>
+
+
+<div class="progress">
+  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
+<Script src="/js/scrollProgressBar.js"></script>
+
+
+<script>
+  var topScroll = document.getElementById("topScroll");
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topScroll.style.display = "block";
+    } else {
+      topScroll.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
+  
+  let stickySideBarElem = document.getElementById("stickySideBar");
+  let stickyNavBar =  true ;
+  if(stickyNavBar) {
+    let headerElem = document.getElementById("profileHeader");
+    let headerHeight = headerElem.offsetHeight + 15;
+    stickySideBarElem.style.top = headerHeight + "px";
+  } else {
+    stickySideBarElem.style.top = "50px";
+  }
+</script>
+
+
+<script src="/js/readingTime.js"></script>
+
+
 
   </div><footer>
     
