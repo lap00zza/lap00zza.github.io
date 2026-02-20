@@ -1,10 +1,10 @@
 ./config.yaml
 ./.hugo_build.lock
 layouts/
-static/
+# static/
 themes/
 data/
-content/
-assets/
+# content/
+# assets/
 archetypes/
 resources/

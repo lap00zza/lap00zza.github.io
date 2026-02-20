@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<meta name="generator" content="Hugo 0.92.2" /><meta charset="UTF-8">
+	<meta name="generator" content="Hugo 0.155.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
-<link rel="icon" href=/favicon.png type="image/gif">
+<link rel="icon" href="/favicon.png" type="image/gif">
 
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,41 +29,48 @@
 
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-K2DTN0TWZ0"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-K2DTN0TWZ0', { 'anonymize_ip': false });
-}
-</script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-K2DTN0TWZ0"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-K2DTN0TWZ0');
+        }
+      </script>
+<meta property="og:url" content="http://localhost:1313/">
+  <meta property="og:site_name" content="Jewel Mahanta">
+  <meta property="og:title" content="Jewel Mahanta">
+  <meta property="og:description" content="This is my personal site where I share interesting things that I am working on.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
 
-<meta property="og:title" content="Jewel Mahanta" />
-<meta property="og:description" content="This is my personal site where I share interesting things that I am working on." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://jmahanta.in/" /><meta property="og:site_name" content="Jewel Mahanta" />
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Jewel Mahanta">
+  <meta name="twitter:description" content="This is my personal site where I share interesting things that I am working on.">
 
 
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Jewel Mahanta"/>
-<meta name="twitter:description" content="This is my personal site where I share interesting things that I am working on."/>
+
 
 
 <link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/language-switcher.css" media="all">
 <link rel="stylesheet" href="/css/footer.css" media="all">
 
 
 <link rel="stylesheet" href="/css/theme.css" media="all">
 
-
-
-
 <style>
     :root {
         --text-color: #343a40;
         --text-secondary-color: #6c757d;
+        --text-link-color: #007bff;
         --background-color: #eaedf0;
         --secondary-background-color: #64ffda1a;
         --primary-color: #007bff;
@@ -72,6 +79,7 @@ if (!doNotTrack) {
          
         --text-color-dark: #e4e6eb;
         --text-secondary-color-dark: #b0b3b8;
+        --text-link-color-dark: #ffffff;
         --background-color-dark: #18191a;
         --secondary-background-color-dark: #212529;
         --primary-color-dark: #ffffff;
@@ -93,11 +101,11 @@ if (!doNotTrack) {
         width: 8px;
         background-color: var(--background-color);
     }
-    
+
     ::-webkit-scrollbar-track {
         border-radius: 1rem;
     }
-    
+
     ::-webkit-scrollbar-thumb {
         border-radius: 1rem;
         background: #b0b0b0;
@@ -111,12 +119,18 @@ if (!doNotTrack) {
     }
 </style>
 
+
+
 <meta name="description" content=This&#32;is&#32;my&#32;personal&#32;site&#32;where&#32;I&#32;share&#32;interesting&#32;things&#32;that&#32;I&#32;am&#32;working&#32;on.>
 <link rel="stylesheet" href="/css/index.css" media="all">
 <link rel="stylesheet" href="/css/projects.css" media="all">
 
 
 <script defer src="/fontawesome-6/all-6.4.2.js"></script>
+
+
+  
+  
 
   <title>
 Jewel Mahanta
@@ -133,13 +147,16 @@ Jewel Mahanta
 
     switch (localStorageValue) {
         case "dark":
+            document.documentElement.classList.add('dark');
             document.body.classList.add('dark');
             break;
         case "light":
             document.body.classList.remove('dark');
+            document.documentElement.classList.remove('dark');
             break;
         default:
             if (mediaQuery) {
+                document.documentElement.classList.add('dark');
                 document.body.classList.add('dark');
             }
             break;
@@ -168,7 +185,7 @@ Jewel Mahanta
         if(resetHeaderStyle) {
             profileHeaderElem.classList.remove("showHeaderOnTop");
         }
-        prevScrollPos = currentScrollPos;        
+        prevScrollPos = currentScrollPos;
     });
 </script>
 
@@ -188,7 +205,7 @@ Jewel Mahanta
 
             
                 <div>
-                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder='Ctrl &#43; k to Search...'
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder='Search...'
                         aria-label="Search" oninput="searchOnChange(event)">
                 </div>
             
@@ -207,7 +224,7 @@ Jewel Mahanta
                     
                         <li class="nav-item navbar-text d-block d-md-none">
                             <div class="nav-link">
-                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder='Ctrl &#43; k to Search...' aria-label="Search" oninput="searchOnChange(event)">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder='Search...' aria-label="Search" oninput="searchOnChange(event)">
                             </div>
                         </li>
                     
@@ -238,6 +255,8 @@ Jewel Mahanta
                     
 
                     
+
+                    
                     
                     
                     
@@ -260,11 +279,10 @@ Jewel Mahanta
                     
                     
 
-                    
                     <li class="nav-item navbar-text">
                         
                         <div class="text-center">
-                            <button id="theme-toggle">
+                            <button id="theme-toggle" type="button" aria-label="Toggle dark mode">
                                 <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                                 </svg>
@@ -290,20 +308,19 @@ Jewel Mahanta
         </div>
     </nav>
 </header>
-<div id="content">
-<section id="hero" class="py-5 align-middle">
+<div id="content"><section id="hero" class="py-5 align-middle">
     <div class="container px-3 px-sm-5 px-md-5 px-lg-5 pt-lg-3">
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-8 content animate" id="primary-font">
                 <span class="subtitle">
                     Hi, my name is
                 </span>
-                <h2>
+                <h1>
                     Jewel.
-                </h2>
-                <h3>
+                </h1>
+                <h2>
                     I am an Educator.
-                </h3>
+                </h2>
                 <p class="hero-content">
                     Teaching STEM is my passion. Programming and tinkering with electronics are my hobby. I post interesting things about my projects and experiences here.
                 </p>
@@ -314,34 +331,44 @@ Jewel Mahanta
                     <div class="col-auto px-0 h-100"><span>
     
     <span class="px-1">
-        <a href="https://github.com/lap00zza" target="_blank" class="btn social-icon">
+        <a href="https://github.com/lap00zza"
+             target="_blank" 
+            class="btn social-icon"
+        >
             <i class="fab fa-github"></i>
         </a>
     </span>
     
     <span class="px-1">
-        <a href="https://www.npmjs.com/~lap00zza" target="_blank" class="btn social-icon">
+        <a href="https://www.npmjs.com/~lap00zza"
+             target="_blank" 
+            class="btn social-icon"
+        >
             <i class="fab fa-npm"></i>
         </a>
     </span>
     
     <span class="px-1">
-        <a href="https://www.instagram.com/jewelmahanta" target="_blank" class="btn social-icon">
+        <a href="https://www.instagram.com/jewelmahanta"
+             target="_blank" 
+            class="btn social-icon"
+        >
             <i class="fab fa-instagram"></i>
         </a>
     </span>
     
 
     
-</span></div>
+</span>
+</div>
                 </div>
             </div>
             <div class="col-sm-12 col-md-12 col-lg-4">
                 <div class="row justify-content-center">
                     <div class="col-sm-12 col-md-9 pt-5 image animate px-5 px-md-5 px-lg-0 text-center">
-                        <img src=""
+                        <img src="/me_new.png"
                             class="img-thumbnail mx-auto"
-                            alt=""
+                            alt="Jewel Mahanta profile image"
                         >
                     </div>
                 </div>
@@ -349,18 +376,274 @@ Jewel Mahanta
         </div>
     </div>
     
+    <div class="hero-bottom-svg d-md-block d-lg-block d-none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="201" height="201" viewBox="0 0 201 201">
+            <g id="Group_1168" data-name="Group 1168" transform="translate(-384 -1392)">
+                <rect id="Rectangle_2206" data-name="Rectangle 2206" width="12" height="2" rx="1"
+                    transform="translate(391 1392) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2271" data-name="Rectangle 2271" width="12" height="2" rx="1"
+                    transform="translate(391 1500) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2238" data-name="Rectangle 2238" width="12" height="2" rx="1"
+                    transform="translate(391 1446) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2278" data-name="Rectangle 2278" width="12" height="2" rx="1"
+                    transform="translate(391 1554) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2222" data-name="Rectangle 2222" width="12" height="2" rx="1"
+                    transform="translate(391 1419) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2272" data-name="Rectangle 2272" width="12" height="2" rx="1"
+                    transform="translate(391 1527) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2241" data-name="Rectangle 2241" width="12" height="2" rx="1"
+                    transform="translate(391 1473) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2288" data-name="Rectangle 2288" width="12" height="2" rx="1"
+                    transform="translate(391 1581) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2214" data-name="Rectangle 2214" width="12" height="2" rx="1"
+                    transform="translate(499 1392) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2289" data-name="Rectangle 2289" width="12" height="2" rx="1"
+                    transform="translate(499 1500) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2256" data-name="Rectangle 2256" width="12" height="2" rx="1"
+                    transform="translate(499 1446) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2290" data-name="Rectangle 2290" width="12" height="2" rx="1"
+                    transform="translate(499 1554) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2231" data-name="Rectangle 2231" width="12" height="2" rx="1"
+                    transform="translate(499 1419) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2291" data-name="Rectangle 2291" width="12" height="2" rx="1"
+                    transform="translate(499 1527) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2257" data-name="Rectangle 2257" width="12" height="2" rx="1"
+                    transform="translate(499 1473) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2292" data-name="Rectangle 2292" width="12" height="2" rx="1"
+                    transform="translate(499 1581) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2210" data-name="Rectangle 2210" width="12" height="2" rx="1"
+                    transform="translate(445 1392) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2279" data-name="Rectangle 2279" width="12" height="2" rx="1"
+                    transform="translate(445 1500) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2248" data-name="Rectangle 2248" width="12" height="2" rx="1"
+                    transform="translate(445 1446) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2280" data-name="Rectangle 2280" width="12" height="2" rx="1"
+                    transform="translate(445 1554) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2226" data-name="Rectangle 2226" width="12" height="2" rx="1"
+                    transform="translate(445 1419) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2281" data-name="Rectangle 2281" width="12" height="2" rx="1"
+                    transform="translate(445 1527) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2249" data-name="Rectangle 2249" width="12" height="2" rx="1"
+                    transform="translate(445 1473) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2293" data-name="Rectangle 2293" width="12" height="2" rx="1"
+                    transform="translate(445 1581) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2219" data-name="Rectangle 2219" width="12" height="2" rx="1"
+                    transform="translate(553 1392) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2310" data-name="Rectangle 2310" width="12" height="2" rx="1"
+                    transform="translate(553 1500) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2262" data-name="Rectangle 2262" width="12" height="2" rx="1"
+                    transform="translate(553 1446) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2311" data-name="Rectangle 2311" width="12" height="2" rx="1"
+                    transform="translate(553 1554) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2232" data-name="Rectangle 2232" width="12" height="2" rx="1"
+                    transform="translate(553 1419) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2312" data-name="Rectangle 2312" width="12" height="2" rx="1"
+                    transform="translate(553 1527) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2263" data-name="Rectangle 2263" width="12" height="2" rx="1"
+                    transform="translate(553 1473) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2313" data-name="Rectangle 2313" width="12" height="2" rx="1"
+                    transform="translate(553 1581) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2209" data-name="Rectangle 2209" width="12" height="2" rx="1"
+                    transform="translate(418 1392) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2273" data-name="Rectangle 2273" width="12" height="2" rx="1"
+                    transform="translate(418 1500) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2242" data-name="Rectangle 2242" width="12" height="2" rx="1"
+                    transform="translate(418 1446) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2282" data-name="Rectangle 2282" width="12" height="2" rx="1"
+                    transform="translate(418 1554) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2223" data-name="Rectangle 2223" width="12" height="2" rx="1"
+                    transform="translate(418 1419) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2274" data-name="Rectangle 2274" width="12" height="2" rx="1"
+                    transform="translate(418 1527) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2243" data-name="Rectangle 2243" width="12" height="2" rx="1"
+                    transform="translate(418 1473) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2294" data-name="Rectangle 2294" width="12" height="2" rx="1"
+                    transform="translate(418 1581) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2217" data-name="Rectangle 2217" width="12" height="2" rx="1"
+                    transform="translate(526 1392) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2314" data-name="Rectangle 2314" width="12" height="2" rx="1"
+                    transform="translate(526 1500) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2258" data-name="Rectangle 2258" width="12" height="2" rx="1"
+                    transform="translate(526 1446) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2315" data-name="Rectangle 2315" width="12" height="2" rx="1"
+                    transform="translate(526 1554) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2233" data-name="Rectangle 2233" width="12" height="2" rx="1"
+                    transform="translate(526 1419) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2316" data-name="Rectangle 2316" width="12" height="2" rx="1"
+                    transform="translate(526 1527) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2259" data-name="Rectangle 2259" width="12" height="2" rx="1"
+                    transform="translate(526 1473) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2317" data-name="Rectangle 2317" width="12" height="2" rx="1"
+                    transform="translate(526 1581) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2211" data-name="Rectangle 2211" width="12" height="2" rx="1"
+                    transform="translate(472 1392) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2295" data-name="Rectangle 2295" width="12" height="2" rx="1"
+                    transform="translate(472 1500) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2250" data-name="Rectangle 2250" width="12" height="2" rx="1"
+                    transform="translate(472 1446) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2296" data-name="Rectangle 2296" width="12" height="2" rx="1"
+                    transform="translate(472 1554) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2227" data-name="Rectangle 2227" width="12" height="2" rx="1"
+                    transform="translate(472 1419) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2297" data-name="Rectangle 2297" width="12" height="2" rx="1"
+                    transform="translate(472 1527) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2251" data-name="Rectangle 2251" width="12" height="2" rx="1"
+                    transform="translate(472 1473) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2298" data-name="Rectangle 2298" width="12" height="2" rx="1"
+                    transform="translate(472 1581) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2221" data-name="Rectangle 2221" width="12" height="2" rx="1"
+                    transform="translate(580 1392) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2318" data-name="Rectangle 2318" width="12" height="2" rx="1"
+                    transform="translate(580 1500) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2264" data-name="Rectangle 2264" width="12" height="2" rx="1"
+                    transform="translate(580 1446) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2319" data-name="Rectangle 2319" width="12" height="2" rx="1"
+                    transform="translate(580 1554) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2236" data-name="Rectangle 2236" width="12" height="2" rx="1"
+                    transform="translate(580 1419) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2320" data-name="Rectangle 2320" width="12" height="2" rx="1"
+                    transform="translate(580 1527) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2265" data-name="Rectangle 2265" width="12" height="2" rx="1"
+                    transform="translate(580 1473) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2321" data-name="Rectangle 2321" width="12" height="2" rx="1"
+                    transform="translate(580 1581) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2207" data-name="Rectangle 2207" width="12" height="2" rx="1"
+                    transform="translate(396 1399) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2270" data-name="Rectangle 2270" width="12" height="2" rx="1"
+                    transform="translate(396 1507) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2239" data-name="Rectangle 2239" width="12" height="2" rx="1"
+                    transform="translate(396 1453) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2283" data-name="Rectangle 2283" width="12" height="2" rx="1"
+                    transform="translate(396 1561) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2224" data-name="Rectangle 2224" width="12" height="2" rx="1"
+                    transform="translate(396 1426) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2275" data-name="Rectangle 2275" width="12" height="2" rx="1"
+                    transform="translate(396 1534) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2244" data-name="Rectangle 2244" width="12" height="2" rx="1"
+                    transform="translate(396 1480) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2299" data-name="Rectangle 2299" width="12" height="2" rx="1"
+                    transform="translate(396 1588) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2215" data-name="Rectangle 2215" width="12" height="2" rx="1"
+                    transform="translate(504 1399) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2300" data-name="Rectangle 2300" width="12" height="2" rx="1"
+                    transform="translate(504 1507) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2252" data-name="Rectangle 2252" width="12" height="2" rx="1"
+                    transform="translate(504 1453) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2301" data-name="Rectangle 2301" width="12" height="2" rx="1"
+                    transform="translate(504 1561) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2228" data-name="Rectangle 2228" width="12" height="2" rx="1"
+                    transform="translate(504 1426) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2302" data-name="Rectangle 2302" width="12" height="2" rx="1"
+                    transform="translate(504 1534) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2253" data-name="Rectangle 2253" width="12" height="2" rx="1"
+                    transform="translate(504 1480) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2303" data-name="Rectangle 2303" width="12" height="2" rx="1"
+                    transform="translate(504 1588) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2212" data-name="Rectangle 2212" width="12" height="2" rx="1"
+                    transform="translate(450 1399) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2284" data-name="Rectangle 2284" width="12" height="2" rx="1"
+                    transform="translate(450 1507) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2245" data-name="Rectangle 2245" width="12" height="2" rx="1"
+                    transform="translate(450 1453) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2285" data-name="Rectangle 2285" width="12" height="2" rx="1"
+                    transform="translate(450 1561) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2229" data-name="Rectangle 2229" width="12" height="2" rx="1"
+                    transform="translate(450 1426) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2286" data-name="Rectangle 2286" width="12" height="2" rx="1"
+                    transform="translate(450 1534) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2246" data-name="Rectangle 2246" width="12" height="2" rx="1"
+                    transform="translate(450 1480) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2304" data-name="Rectangle 2304" width="12" height="2" rx="1"
+                    transform="translate(450 1588) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2218" data-name="Rectangle 2218" width="12" height="2" rx="1"
+                    transform="translate(558 1399) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2322" data-name="Rectangle 2322" width="12" height="2" rx="1"
+                    transform="translate(558 1507) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2266" data-name="Rectangle 2266" width="12" height="2" rx="1"
+                    transform="translate(558 1453) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2323" data-name="Rectangle 2323" width="12" height="2" rx="1"
+                    transform="translate(558 1561) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2234" data-name="Rectangle 2234" width="12" height="2" rx="1"
+                    transform="translate(558 1426) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2324" data-name="Rectangle 2324" width="12" height="2" rx="1"
+                    transform="translate(558 1534) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2267" data-name="Rectangle 2267" width="12" height="2" rx="1"
+                    transform="translate(558 1480) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2325" data-name="Rectangle 2325" width="12" height="2" rx="1"
+                    transform="translate(558 1588) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2208" data-name="Rectangle 2208" width="12" height="2" rx="1"
+                    transform="translate(423 1399) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2276" data-name="Rectangle 2276" width="12" height="2" rx="1"
+                    transform="translate(423 1507) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2240" data-name="Rectangle 2240" width="12" height="2" rx="1"
+                    transform="translate(423 1453) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2287" data-name="Rectangle 2287" width="12" height="2" rx="1"
+                    transform="translate(423 1561) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2225" data-name="Rectangle 2225" width="12" height="2" rx="1"
+                    transform="translate(423 1426) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2277" data-name="Rectangle 2277" width="12" height="2" rx="1"
+                    transform="translate(423 1534) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2247" data-name="Rectangle 2247" width="12" height="2" rx="1"
+                    transform="translate(423 1480) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2305" data-name="Rectangle 2305" width="12" height="2" rx="1"
+                    transform="translate(423 1588) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2216" data-name="Rectangle 2216" width="12" height="2" rx="1"
+                    transform="translate(531 1399) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2326" data-name="Rectangle 2326" width="12" height="2" rx="1"
+                    transform="translate(531 1507) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2260" data-name="Rectangle 2260" width="12" height="2" rx="1"
+                    transform="translate(531 1453) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2327" data-name="Rectangle 2327" width="12" height="2" rx="1"
+                    transform="translate(531 1561) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2235" data-name="Rectangle 2235" width="12" height="2" rx="1"
+                    transform="translate(531 1426) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2328" data-name="Rectangle 2328" width="12" height="2" rx="1"
+                    transform="translate(531 1534) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2261" data-name="Rectangle 2261" width="12" height="2" rx="1"
+                    transform="translate(531 1480) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2329" data-name="Rectangle 2329" width="12" height="2" rx="1"
+                    transform="translate(531 1588) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2213" data-name="Rectangle 2213" width="12" height="2" rx="1"
+                    transform="translate(477 1399) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2306" data-name="Rectangle 2306" width="12" height="2" rx="1"
+                    transform="translate(477 1507) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2254" data-name="Rectangle 2254" width="12" height="2" rx="1"
+                    transform="translate(477 1453) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2307" data-name="Rectangle 2307" width="12" height="2" rx="1"
+                    transform="translate(477 1561) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2230" data-name="Rectangle 2230" width="12" height="2" rx="1"
+                    transform="translate(477 1426) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2308" data-name="Rectangle 2308" width="12" height="2" rx="1"
+                    transform="translate(477 1534) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2255" data-name="Rectangle 2255" width="12" height="2" rx="1"
+                    transform="translate(477 1480) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2309" data-name="Rectangle 2309" width="12" height="2" rx="1"
+                    transform="translate(477 1588) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2220" data-name="Rectangle 2220" width="12" height="2" rx="1"
+                    transform="translate(585 1399) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2330" data-name="Rectangle 2330" width="12" height="2" rx="1"
+                    transform="translate(585 1507) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2268" data-name="Rectangle 2268" width="12" height="2" rx="1"
+                    transform="translate(585 1453) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2331" data-name="Rectangle 2331" width="12" height="2" rx="1"
+                    transform="translate(585 1561) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2237" data-name="Rectangle 2237" width="12" height="2" rx="1"
+                    transform="translate(585 1426) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2332" data-name="Rectangle 2332" width="12" height="2" rx="1"
+                    transform="translate(585 1534) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2269" data-name="Rectangle 2269" width="12" height="2" rx="1"
+                    transform="translate(585 1480) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2333" data-name="Rectangle 2333" width="12" height="2" rx="1"
+                    transform="translate(585 1588) rotate(-180)" fill="#282f49" />
+            </g>
+        </svg>
+    </div>
+    
 </section>
-
 <section id="about" class="py-0 py-sm-5">
     <div class="container bg-transparent">
         <h3 class="text-center bg-transparent">About Me</h3>
         <div class="bg-transparent row justify-content-center px-3 py-5">
-            
-            <div class="col-sm-12 col-md-8 col-lg-4 mb-5 mb-sm-0 mb-md-5 mb-lg-0 d-none d-sm-none d-md-block">
-                <div class="image d-flex px-5">
-                    <img src="/images/me.webp" class="img-thumbnail mx-auto rounded-circle" alt="">
-                </div>
-            </div>
             
             <div class="col-sm-12 col-md-12 col-lg-8 content">
                 I am based in Guwahati, India. I believe that quality education is a basic human right.
@@ -375,8 +658,6 @@ many people as I can.
                     
                     <li>Python</li>
                     
-                    <li>NodeJS</li>
-                    
                     <li>C</li>
                     
                     <li>Microcontrollers (ESP32/Arduino)</li>
@@ -387,7 +668,6 @@ many people as I can.
         </div>
     </div>
 </section>
-
 
 
 <section id="contact" class="py-5">
@@ -401,7 +681,13 @@ many people as I can.
                     </div>
                     
                     <div class="text-center pt-3">
-                        <a href="mailto:hi@jmahanta.in" class="btn">
+                        <a 
+                            href='
+                                    mailto:hi@jmahanta.in
+                                  '
+                            target="_blank"
+                            class="btn"
+                        >
                             Mail me
                         </a>
                     </div>
@@ -428,6 +714,10 @@ many people as I can.
 
   </div><footer>
     
+
+
+  
+
  
  
 <div class="container py-3" id="recent-posts">
@@ -441,17 +731,23 @@ many people as I can.
         <div class="col-lg-4 col-md-6 pt-2">
             <div class="card h-100">
                 
+                <div class="card-header">
+                    <a href="/blog/ssd1306_7pin_spi/">
+                        <img src="/ssd1306_7pin_spi.webp" class="card-img-top" alt="SSD1306 7 pin (SPI)">
+                    </a>
+                </div>
+                
                 <div class="card-body bg-transparent p-3 shadow-sm">
                     <a href="/blog/ssd1306_7pin_spi/" class="primary-font card-title">
                         <h5 class="card-title bg-transparent" title="SSD1306 7 pin (SPI)">SSD1306 7 pin (SPI)</h5>
                     </a>
                     <div class="card-text secondary-font">
-                        <p>I am currently working on a new project and wanted to add a display. After searching for some decent (and cheap) displays I ordered myself a SSD1306 (specifically this one).
-        SSD1306 7 PIN (SPI)    This specific display comes with SPI enabled by default (and we can set it up for I2C if we …</p>
+                        <p><p>I am currently working on a new project and wanted to add a display. After searching for some decent (and cheap) displays I ordered myself a SSD1306 (<a href="https://robu.in/product/0-96-oled-display-module-spii2c-128x64-7-pin-blue/">specifically this one</a>).</p>
+<p>This specific display comes with SPI enabled by default (and we can set it up for I2C if we want). Since I had a pretty hard …</p></p>
                     </div>
                 </div>
                 <div class="mt-auto card-footer">
-                    <span class="float-start">Apr 25, 2024</span>
+                    <span class="float-start">April 25, 2024</span>
                     <a href="/blog/ssd1306_7pin_spi/" class="float-end btn btn-outline-info btn-sm">Read</a>
                 </div>
             </div>
@@ -460,16 +756,23 @@ many people as I can.
         <div class="col-lg-4 col-md-6 pt-2">
             <div class="card h-100">
                 
+                <div class="card-header">
+                    <a href="/blog/how_to_install_alacritty/">
+                        <img src="/alacritty_on_mint.webp" class="card-img-top" alt="How To Install Alacritty">
+                    </a>
+                </div>
+                
                 <div class="card-body bg-transparent p-3 shadow-sm">
                     <a href="/blog/how_to_install_alacritty/" class="primary-font card-title">
-                        <h5 class="card-title bg-transparent" title="How to install Alacritty in Linux Mint">How to install Alacritty …</h5>
+                        <h5 class="card-title bg-transparent" title="How To Install Alacritty">How To Install Alacritty</h5>
                     </a>
                     <div class="card-text secondary-font">
-                        <p>I recently switched to Alacritty on my laptop and wanted to share how to get it up and running. Alacritty, much like kitty and wezterm, is a GPU accelerated terminal emulator. It is also the lightest and the fastest among the three and it plays well with TMUX which is a must for me. …</p>
+                        <p><p>I recently switched to Alacritty on my laptop and wanted to share how to get it up and running. Alacritty, much like kitty and wezterm, is a GPU accelerated terminal emulator. It is also the lightest and the fastest among the three and it plays well with TMUX which is a must for me.</p>
+<h2 id="install-steps">Install Steps …</h2></p>
                     </div>
                 </div>
                 <div class="mt-auto card-footer">
-                    <span class="float-start">Apr 9, 2024</span>
+                    <span class="float-start">April 9, 2024</span>
                     <a href="/blog/how_to_install_alacritty/" class="float-end btn btn-outline-info btn-sm">Read</a>
                 </div>
             </div>
@@ -478,16 +781,22 @@ many people as I can.
         <div class="col-lg-4 col-md-6 pt-2">
             <div class="card h-100">
                 
+                <div class="card-header">
+                    <a href="/blog/linux_journey/">
+                        <img src="/my_desktop.webp" class="card-img-top" alt="My Linux Journey">
+                    </a>
+                </div>
+                
                 <div class="card-body bg-transparent p-3 shadow-sm">
                     <a href="/blog/linux_journey/" class="primary-font card-title">
                         <h5 class="card-title bg-transparent" title="My Linux Journey">My Linux Journey</h5>
                     </a>
                     <div class="card-text secondary-font">
-                        <p>I have been a long time linux user (10+ years). My fascination with linux began in 11th grade when I stumbled upon the Github Student Developer Pack. I was already interested in programming by then but this gave me access to a whole new world. And ofcourse, a VPS was one of them. Oh boy was I …</p>
+                        <p><p>I have been a long time linux user (10+ years). My fascination with linux began in 11th grade when I stumbled upon the Github Student Developer Pack. I was already interested in programming by then but this gave me access to a whole new world. And ofcourse, a VPS was one of them. Oh boy was I …</p></p>
                     </div>
                 </div>
                 <div class="mt-auto card-footer">
-                    <span class="float-start">Mar 11, 2024</span>
+                    <span class="float-start">March 11, 2024</span>
                     <a href="/blog/linux_journey/" class="float-end btn btn-outline-info btn-sm">Read</a>
                 </div>
             </div>
@@ -509,23 +818,39 @@ many people as I can.
 </div><div class="container py-4">
     <div class="row justify-content-center">
         <div class="col-md-4 text-center">
-            <div class="pb-2">
-                <a href="https://jmahanta.in/" title="Jewel Mahanta">
-                    <img alt="Footer logo" src="/favicon.png"
-                        height="40px" width="40px">
+            
+                <div class="pb-2">
+                    <a href="http://localhost:1313/" title="Jewel Mahanta">
+                        <img alt="Footer logo" src="/favicon.png"
+                            height="40px" width="40px">
+                    </a>
+                </div>
+            
+            &copy; 2026  All rights reserved
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
                 </a>
             </div>
-            &copy; 2024  All rights reserved
-            
         </div>
     </div>
-</div></footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+</div>
+</footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
+        document.documentElement.classList.add('dark');
         document.body.classList.add('dark');
     } else if (localStorage.getItem("pref-theme") === "light") {
         document.body.classList.remove('dark')
+        document.documentElement.classList.remove('dark');
     } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.classList.add('dark');
         document.body.classList.add('dark');
     }
 
@@ -534,9 +859,11 @@ many people as I can.
     document.getElementById("theme-toggle").addEventListener("click", () => {
         if (document.body.className.includes("dark")) {
             document.body.classList.remove('dark');
+            document.documentElement.classList.remove('dark');
             localStorage.setItem("pref-theme", 'light');
         } else {
             document.body.classList.add('dark');
+            document.documentElement.classList.add('dark');
             localStorage.setItem("pref-theme", 'dark');
         }
     })
@@ -549,6 +876,10 @@ many people as I can.
 </script>
 
 
+    <script>
+      
+      window.searchIndexURL = "/index.json";
+    </script>
     <script src="/js/search.js"></script>
 
 

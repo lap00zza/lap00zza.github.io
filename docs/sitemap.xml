@@ -2,52 +2,45 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://jmahanta.in/blog/</loc>
-    <lastmod>2024-04-25T22:21:50+05:30</lastmod>
+    <loc>http://localhost:1313/blog/</loc>
+    <lastmod>2024-04-25T11:33:29+05:30</lastmod>
   </url><url>
-    <loc>https://jmahanta.in/categories/</loc>
-    <lastmod>2024-04-25T22:21:50+05:30</lastmod>
+    <loc>http://localhost:1313/tags/esp-idf/</loc>
+    <lastmod>2024-04-25T11:33:29+05:30</lastmod>
   </url><url>
-    <loc>https://jmahanta.in/categories/developement/</loc>
-    <lastmod>2024-04-25T22:21:50+05:30</lastmod>
+    <loc>http://localhost:1313/tags/esp32/</loc>
+    <lastmod>2024-04-25T11:33:29+05:30</lastmod>
   </url><url>
-    <loc>https://jmahanta.in/tags/esp-idf/</loc>
-    <lastmod>2024-04-25T22:21:50+05:30</lastmod>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2024-04-25T11:33:29+05:30</lastmod>
   </url><url>
-    <loc>https://jmahanta.in/tags/esp32/</loc>
-    <lastmod>2024-04-25T22:21:50+05:30</lastmod>
+    <loc>http://localhost:1313/tags/spi/</loc>
+    <lastmod>2024-04-25T11:33:29+05:30</lastmod>
   </url><url>
-    <loc>https://jmahanta.in/categories/esp32/</loc>
-    <lastmod>2024-04-25T22:21:50+05:30</lastmod>
+    <loc>http://localhost:1313/tags/ssd1306/</loc>
+    <lastmod>2024-04-25T11:33:29+05:30</lastmod>
   </url><url>
-    <loc>https://jmahanta.in/</loc>
-    <lastmod>2024-04-25T22:21:50+05:30</lastmod>
+    <loc>http://localhost:1313/blog/ssd1306_7pin_spi/</loc>
+    <lastmod>2024-04-25T11:33:29+05:30</lastmod>
   </url><url>
-    <loc>https://jmahanta.in/tags/spi/</loc>
-    <lastmod>2024-04-25T22:21:50+05:30</lastmod>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2024-04-25T11:33:29+05:30</lastmod>
   </url><url>
-    <loc>https://jmahanta.in/tags/ssd1306/</loc>
-    <lastmod>2024-04-25T22:21:50+05:30</lastmod>
+    <loc>http://localhost:1313/tags/alacritty/</loc>
+    <lastmod>2024-04-09T11:33:03+05:30</lastmod>
   </url><url>
-    <loc>https://jmahanta.in/blog/ssd1306_7pin_spi/</loc>
-    <lastmod>2024-04-25T22:21:50+05:30</lastmod>
+    <loc>http://localhost:1313/blog/how_to_install_alacritty/</loc>
+    <lastmod>2024-04-09T11:33:03+05:30</lastmod>
   </url><url>
-    <loc>https://jmahanta.in/tags/</loc>
-    <lastmod>2024-04-25T22:21:50+05:30</lastmod>
+    <loc>http://localhost:1313/tags/linux/</loc>
+    <lastmod>2024-04-09T11:33:03+05:30</lastmod>
   </url><url>
-    <loc>https://jmahanta.in/blog/how_to_install_alacritty/</loc>
-    <lastmod>2024-04-09T09:53:13+05:30</lastmod>
+    <loc>http://localhost:1313/tags/terminal/</loc>
+    <lastmod>2024-04-09T11:33:03+05:30</lastmod>
   </url><url>
-    <loc>https://jmahanta.in/tags/linux/</loc>
-    <lastmod>2024-04-09T09:53:13+05:30</lastmod>
+    <loc>http://localhost:1313/blog/linux_journey/</loc>
+    <lastmod>2024-03-11T11:32:15+05:30</lastmod>
   </url><url>
-    <loc>https://jmahanta.in/categories/linux/</loc>
-    <lastmod>2024-04-09T09:53:13+05:30</lastmod>
-  </url><url>
-    <loc>https://jmahanta.in/tags/terminal/</loc>
-    <lastmod>2024-04-09T09:53:13+05:30</lastmod>
-  </url><url>
-    <loc>https://jmahanta.in/blog/linux_journey/</loc>
-    <lastmod>2024-03-11T17:38:36+05:30</lastmod>
+    <loc>http://localhost:1313/categories/</loc>
   </url>
 </urlset>

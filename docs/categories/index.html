@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-<head><meta charset="UTF-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
-<link rel="icon" href=/favicon.png type="image/gif">
+<link rel="icon" href="/favicon.png" type="image/gif">
 
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,41 +28,48 @@
 
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-K2DTN0TWZ0"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-K2DTN0TWZ0', { 'anonymize_ip': false });
-}
-</script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-K2DTN0TWZ0"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-K2DTN0TWZ0');
+        }
+      </script>
+<meta property="og:url" content="http://localhost:1313/categories/">
+  <meta property="og:site_name" content="Jewel Mahanta">
+  <meta property="og:title" content="Categories">
+  <meta property="og:description" content="This is my personal site where I share interesting things that I am working on.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
 
-<meta property="og:title" content="Categories" />
-<meta property="og:description" content="This is my personal site where I share interesting things that I am working on." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://jmahanta.in/categories/" /><meta property="og:site_name" content="Jewel Mahanta" />
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Categories">
+  <meta name="twitter:description" content="This is my personal site where I share interesting things that I am working on.">
 
 
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Categories"/>
-<meta name="twitter:description" content="This is my personal site where I share interesting things that I am working on."/>
+
 
 
 <link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/language-switcher.css" media="all">
 <link rel="stylesheet" href="/css/footer.css" media="all">
 
 
 <link rel="stylesheet" href="/css/theme.css" media="all">
 
-
-
-
 <style>
     :root {
         --text-color: #343a40;
         --text-secondary-color: #6c757d;
+        --text-link-color: #007bff;
         --background-color: #eaedf0;
         --secondary-background-color: #64ffda1a;
         --primary-color: #007bff;
@@ -71,6 +78,7 @@ if (!doNotTrack) {
          
         --text-color-dark: #e4e6eb;
         --text-secondary-color-dark: #b0b3b8;
+        --text-link-color-dark: #ffffff;
         --background-color-dark: #18191a;
         --secondary-background-color-dark: #212529;
         --primary-color-dark: #ffffff;
@@ -92,11 +100,11 @@ if (!doNotTrack) {
         width: 8px;
         background-color: var(--background-color);
     }
-    
+
     ::-webkit-scrollbar-track {
         border-radius: 1rem;
     }
-    
+
     ::-webkit-scrollbar-thumb {
         border-radius: 1rem;
         background: #b0b0b0;
@@ -110,8 +118,14 @@ if (!doNotTrack) {
     }
 </style>
 
+
+
 <meta name="description" content="Categories of Jewel Mahanta">
 <link rel="stylesheet" href="/css/list.css" media="all">
+
+
+  
+  
 
   <title>
 Categories | Jewel Mahanta
@@ -128,13 +142,16 @@ Categories | Jewel Mahanta
 
     switch (localStorageValue) {
         case "dark":
+            document.documentElement.classList.add('dark');
             document.body.classList.add('dark');
             break;
         case "light":
             document.body.classList.remove('dark');
+            document.documentElement.classList.remove('dark');
             break;
         default:
             if (mediaQuery) {
+                document.documentElement.classList.add('dark');
                 document.body.classList.add('dark');
             }
             break;
@@ -163,7 +180,7 @@ Categories | Jewel Mahanta
         if(resetHeaderStyle) {
             profileHeaderElem.classList.remove("showHeaderOnTop");
         }
-        prevScrollPos = currentScrollPos;        
+        prevScrollPos = currentScrollPos;
     });
 </script>
 
@@ -183,7 +200,7 @@ Categories | Jewel Mahanta
 
             
                 <div>
-                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder='Ctrl &#43; k to Search...'
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder='Search...'
                         aria-label="Search" oninput="searchOnChange(event)">
                 </div>
             
@@ -202,7 +219,7 @@ Categories | Jewel Mahanta
                     
                         <li class="nav-item navbar-text d-block d-md-none">
                             <div class="nav-link">
-                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder='Ctrl &#43; k to Search...' aria-label="Search" oninput="searchOnChange(event)">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder='Search...' aria-label="Search" oninput="searchOnChange(event)">
                             </div>
                         </li>
                     
@@ -233,6 +250,8 @@ Categories | Jewel Mahanta
                     
 
                     
+
+                    
                     
                     
                     
@@ -255,11 +274,10 @@ Categories | Jewel Mahanta
                     
                     
 
-                    
                     <li class="nav-item navbar-text">
                         
                         <div class="text-center">
-                            <button id="theme-toggle">
+                            <button id="theme-toggle" type="button" aria-label="Toggle dark mode">
                                 <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                                 </svg>
@@ -290,66 +308,6 @@ Categories | Jewel Mahanta
     <h2 class="text-center pb-2">Categories</h2>
     <div class="row">
         
-        <div class="col-lg-4 col-md-6 my-3">
-            <div class="card-columns">
-                <div class="card h-100">
-                    
-                    <div class="card-body bg-transparent p-4 shadow-sm">
-                        <a href="/categories/developement/" class="primary-font card-title">
-                            <h5 class="card-title bg-transparent" title="developement">developement</h5>
-                        </a>
-                        <div class="card-text secondary-font">
-                            <p></p>
-                        </div>
-                    </div>
-                    <div class="mt-auto post-footer bg-transparent py-3">
-                        <span class="float-start bg-transparent">Apr 25, 2024</span>
-                        <a href="/categories/developement/" class="float-end btn btn-outline-info btn-sm">Read</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-lg-4 col-md-6 my-3">
-            <div class="card-columns">
-                <div class="card h-100">
-                    
-                    <div class="card-body bg-transparent p-4 shadow-sm">
-                        <a href="/categories/esp32/" class="primary-font card-title">
-                            <h5 class="card-title bg-transparent" title="esp32">esp32</h5>
-                        </a>
-                        <div class="card-text secondary-font">
-                            <p></p>
-                        </div>
-                    </div>
-                    <div class="mt-auto post-footer bg-transparent py-3">
-                        <span class="float-start bg-transparent">Apr 25, 2024</span>
-                        <a href="/categories/esp32/" class="float-end btn btn-outline-info btn-sm">Read</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-lg-4 col-md-6 my-3">
-            <div class="card-columns">
-                <div class="card h-100">
-                    
-                    <div class="card-body bg-transparent p-4 shadow-sm">
-                        <a href="/categories/linux/" class="primary-font card-title">
-                            <h5 class="card-title bg-transparent" title="linux">linux</h5>
-                        </a>
-                        <div class="card-text secondary-font">
-                            <p></p>
-                        </div>
-                    </div>
-                    <div class="mt-auto post-footer bg-transparent py-3">
-                        <span class="float-start bg-transparent">Apr 9, 2024</span>
-                        <a href="/categories/linux/" class="float-end btn btn-outline-info btn-sm">Read</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
         <div class="row justify-content-center">
             <div class="col-auto m-3">
                 
@@ -360,6 +318,10 @@ Categories | Jewel Mahanta
 
   </div><footer>
     
+
+
+  
+
  
  
 <div class="container py-3" id="recent-posts">
@@ -373,17 +335,23 @@ Categories | Jewel Mahanta
         <div class="col-lg-4 col-md-6 pt-2">
             <div class="card h-100">
                 
+                <div class="card-header">
+                    <a href="/blog/ssd1306_7pin_spi/">
+                        <img src="/ssd1306_7pin_spi.webp" class="card-img-top" alt="SSD1306 7 pin (SPI)">
+                    </a>
+                </div>
+                
                 <div class="card-body bg-transparent p-3 shadow-sm">
                     <a href="/blog/ssd1306_7pin_spi/" class="primary-font card-title">
                         <h5 class="card-title bg-transparent" title="SSD1306 7 pin (SPI)">SSD1306 7 pin (SPI)</h5>
                     </a>
                     <div class="card-text secondary-font">
-                        <p>I am currently working on a new project and wanted to add a display. After searching for some decent (and cheap) displays I ordered myself a SSD1306 (specifically this one).
-        SSD1306 7 PIN (SPI)    This specific display comes with SPI enabled by default (and we can set it up for I2C if we …</p>
+                        <p><p>I am currently working on a new project and wanted to add a display. After searching for some decent (and cheap) displays I ordered myself a SSD1306 (<a href="https://robu.in/product/0-96-oled-display-module-spii2c-128x64-7-pin-blue/">specifically this one</a>).</p>
+<p>This specific display comes with SPI enabled by default (and we can set it up for I2C if we want). Since I had a pretty hard …</p></p>
                     </div>
                 </div>
                 <div class="mt-auto card-footer">
-                    <span class="float-start">Apr 25, 2024</span>
+                    <span class="float-start">April 25, 2024</span>
                     <a href="/blog/ssd1306_7pin_spi/" class="float-end btn btn-outline-info btn-sm">Read</a>
                 </div>
             </div>
@@ -392,16 +360,23 @@ Categories | Jewel Mahanta
         <div class="col-lg-4 col-md-6 pt-2">
             <div class="card h-100">
                 
+                <div class="card-header">
+                    <a href="/blog/how_to_install_alacritty/">
+                        <img src="/alacritty_on_mint.webp" class="card-img-top" alt="How To Install Alacritty">
+                    </a>
+                </div>
+                
                 <div class="card-body bg-transparent p-3 shadow-sm">
                     <a href="/blog/how_to_install_alacritty/" class="primary-font card-title">
-                        <h5 class="card-title bg-transparent" title="How to install Alacritty in Linux Mint">How to install Alacritty …</h5>
+                        <h5 class="card-title bg-transparent" title="How To Install Alacritty">How To Install Alacritty</h5>
                     </a>
                     <div class="card-text secondary-font">
-                        <p>I recently switched to Alacritty on my laptop and wanted to share how to get it up and running. Alacritty, much like kitty and wezterm, is a GPU accelerated terminal emulator. It is also the lightest and the fastest among the three and it plays well with TMUX which is a must for me. …</p>
+                        <p><p>I recently switched to Alacritty on my laptop and wanted to share how to get it up and running. Alacritty, much like kitty and wezterm, is a GPU accelerated terminal emulator. It is also the lightest and the fastest among the three and it plays well with TMUX which is a must for me.</p>
+<h2 id="install-steps">Install Steps …</h2></p>
                     </div>
                 </div>
                 <div class="mt-auto card-footer">
-                    <span class="float-start">Apr 9, 2024</span>
+                    <span class="float-start">April 9, 2024</span>
                     <a href="/blog/how_to_install_alacritty/" class="float-end btn btn-outline-info btn-sm">Read</a>
                 </div>
             </div>
@@ -410,16 +385,22 @@ Categories | Jewel Mahanta
         <div class="col-lg-4 col-md-6 pt-2">
             <div class="card h-100">
                 
+                <div class="card-header">
+                    <a href="/blog/linux_journey/">
+                        <img src="/my_desktop.webp" class="card-img-top" alt="My Linux Journey">
+                    </a>
+                </div>
+                
                 <div class="card-body bg-transparent p-3 shadow-sm">
                     <a href="/blog/linux_journey/" class="primary-font card-title">
                         <h5 class="card-title bg-transparent" title="My Linux Journey">My Linux Journey</h5>
                     </a>
                     <div class="card-text secondary-font">
-                        <p>I have been a long time linux user (10+ years). My fascination with linux began in 11th grade when I stumbled upon the Github Student Developer Pack. I was already interested in programming by then but this gave me access to a whole new world. And ofcourse, a VPS was one of them. Oh boy was I …</p>
+                        <p><p>I have been a long time linux user (10+ years). My fascination with linux began in 11th grade when I stumbled upon the Github Student Developer Pack. I was already interested in programming by then but this gave me access to a whole new world. And ofcourse, a VPS was one of them. Oh boy was I …</p></p>
                     </div>
                 </div>
                 <div class="mt-auto card-footer">
-                    <span class="float-start">Mar 11, 2024</span>
+                    <span class="float-start">March 11, 2024</span>
                     <a href="/blog/linux_journey/" class="float-end btn btn-outline-info btn-sm">Read</a>
                 </div>
             </div>
@@ -441,23 +422,39 @@ Categories | Jewel Mahanta
 </div><div class="container py-4">
     <div class="row justify-content-center">
         <div class="col-md-4 text-center">
-            <div class="pb-2">
-                <a href="https://jmahanta.in/" title="Jewel Mahanta">
-                    <img alt="Footer logo" src="/favicon.png"
-                        height="40px" width="40px">
+            
+                <div class="pb-2">
+                    <a href="http://localhost:1313/" title="Jewel Mahanta">
+                        <img alt="Footer logo" src="/favicon.png"
+                            height="40px" width="40px">
+                    </a>
+                </div>
+            
+            &copy; 2026  All rights reserved
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
                 </a>
             </div>
-            &copy; 2024  All rights reserved
-            
         </div>
     </div>
-</div></footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+</div>
+</footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
+        document.documentElement.classList.add('dark');
         document.body.classList.add('dark');
     } else if (localStorage.getItem("pref-theme") === "light") {
         document.body.classList.remove('dark')
+        document.documentElement.classList.remove('dark');
     } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.classList.add('dark');
         document.body.classList.add('dark');
     }
 
@@ -466,9 +463,11 @@ Categories | Jewel Mahanta
     document.getElementById("theme-toggle").addEventListener("click", () => {
         if (document.body.className.includes("dark")) {
             document.body.classList.remove('dark');
+            document.documentElement.classList.remove('dark');
             localStorage.setItem("pref-theme", 'light');
         } else {
             document.body.classList.add('dark');
+            document.documentElement.classList.add('dark');
             localStorage.setItem("pref-theme", 'dark');
         }
     })
@@ -481,6 +480,10 @@ Categories | Jewel Mahanta
 </script>
 
 
+    <script>
+      
+      window.searchIndexURL = "/index.json";
+    </script>
     <script src="/js/search.js"></script>
 
 

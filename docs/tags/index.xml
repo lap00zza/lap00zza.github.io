@@ -2,64 +2,60 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Jewel Mahanta</title>
-    <link>https://jmahanta.in/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Jewel Mahanta</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 25 Apr 2024 22:21:50 +0530</lastBuildDate><atom:link href="https://jmahanta.in/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 Apr 2024 11:33:29 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>esp-idf</title>
-      <link>https://jmahanta.in/tags/esp-idf/</link>
-      <pubDate>Thu, 25 Apr 2024 22:21:50 +0530</pubDate>
-      
-      <guid>https://jmahanta.in/tags/esp-idf/</guid>
+      <title>Esp-Idf</title>
+      <link>http://localhost:1313/tags/esp-idf/</link>
+      <pubDate>Thu, 25 Apr 2024 11:33:29 +0530</pubDate>
+      <guid>http://localhost:1313/tags/esp-idf/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>esp32</title>
-      <link>https://jmahanta.in/tags/esp32/</link>
-      <pubDate>Thu, 25 Apr 2024 22:21:50 +0530</pubDate>
-      
-      <guid>https://jmahanta.in/tags/esp32/</guid>
+      <title>Esp32</title>
+      <link>http://localhost:1313/tags/esp32/</link>
+      <pubDate>Thu, 25 Apr 2024 11:33:29 +0530</pubDate>
+      <guid>http://localhost:1313/tags/esp32/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>spi</title>
-      <link>https://jmahanta.in/tags/spi/</link>
-      <pubDate>Thu, 25 Apr 2024 22:21:50 +0530</pubDate>
-      
-      <guid>https://jmahanta.in/tags/spi/</guid>
+      <title>Spi</title>
+      <link>http://localhost:1313/tags/spi/</link>
+      <pubDate>Thu, 25 Apr 2024 11:33:29 +0530</pubDate>
+      <guid>http://localhost:1313/tags/spi/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>ssd1306</title>
-      <link>https://jmahanta.in/tags/ssd1306/</link>
-      <pubDate>Thu, 25 Apr 2024 22:21:50 +0530</pubDate>
-      
-      <guid>https://jmahanta.in/tags/ssd1306/</guid>
+      <title>Ssd1306</title>
+      <link>http://localhost:1313/tags/ssd1306/</link>
+      <pubDate>Thu, 25 Apr 2024 11:33:29 +0530</pubDate>
+      <guid>http://localhost:1313/tags/ssd1306/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>linux</title>
-      <link>https://jmahanta.in/tags/linux/</link>
-      <pubDate>Tue, 09 Apr 2024 09:53:13 +0530</pubDate>
-      
-      <guid>https://jmahanta.in/tags/linux/</guid>
+      <title>Alacritty</title>
+      <link>http://localhost:1313/tags/alacritty/</link>
+      <pubDate>Tue, 09 Apr 2024 11:33:03 +0530</pubDate>
+      <guid>http://localhost:1313/tags/alacritty/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>terminal</title>
-      <link>https://jmahanta.in/tags/terminal/</link>
-      <pubDate>Tue, 09 Apr 2024 09:53:13 +0530</pubDate>
-      
-      <guid>https://jmahanta.in/tags/terminal/</guid>
+      <title>Linux</title>
+      <link>http://localhost:1313/tags/linux/</link>
+      <pubDate>Tue, 09 Apr 2024 11:33:03 +0530</pubDate>
+      <guid>http://localhost:1313/tags/linux/</guid>
       <description></description>
     </item>
-    
+    <item>
+      <title>Terminal</title>
+      <link>http://localhost:1313/tags/terminal/</link>
+      <pubDate>Tue, 09 Apr 2024 11:33:03 +0530</pubDate>
+      <guid>http://localhost:1313/tags/terminal/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

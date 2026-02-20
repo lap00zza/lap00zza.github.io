@@ -1,0 +1,87 @@
+/* Language Switcher Styles */
+
+/* Language switcher toggle button */
+#languageDropdown {
+    color: var(--text-color) !important;
+    padding: 0.5rem 0.75rem;
+    transition: color 0.2s ease;
+    border: none;
+    background: transparent;
+}
+
+#languageDropdown:hover {
+    color: var(--primary-color) !important;
+}
+
+#languageDropdown:focus {
+    color: var(--primary-color) !important;
+    outline: none;
+    box-shadow: none;
+}
+
+/* Globe icon styling */
+#languageDropdown::before {
+    font-size: 1.2em;
+}
+
+/* Language dropdown menu */
+.dropdown-menu[aria-labelledby="languageDropdown"] {
+    background-color: var(--background-color) !important;
+    border: 1px solid var(--text-secondary-color) !important;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 0.5rem 0;
+    min-width: 150px;
+    margin-top: 0.5rem;
+}
+
+/* Language dropdown items */
+.dropdown-menu[aria-labelledby="languageDropdown"] .dropdown-item {
+    color: var(--text-color) !important;
+    padding: 0.5rem 1rem;
+    transition: all 0.2s ease;
+    text-align: center;
+    border-radius: 0;
+    background: transparent !important;
+}
+
+.dropdown-menu[aria-labelledby="languageDropdown"] .dropdown-item:hover {
+    color: var(--primary-color) !important;
+    background-color: var(--secondary-color) !important;
+}
+
+.dropdown-menu[aria-labelledby="languageDropdown"] .dropdown-item:focus,
+.dropdown-menu[aria-labelledby="languageDropdown"] .dropdown-item:active {
+    color: var(--primary-color) !important;
+    background-color: var(--secondary-color) !important;
+    outline: none;
+}
+
+/* Active language highlight */
+.dropdown-menu[aria-labelledby="languageDropdown"] .dropdown-item.active {
+    color: var(--primary-color) !important;
+    background-color: var(--secondary-color) !important;
+    font-weight: 500;
+}
+
+/* Language name text */
+#languageDropdown span {
+    margin-left: 0.25rem;
+    font-size: 0.95rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #languageDropdown span {
+        display: none;
+    }
+    
+    .dropdown-menu[aria-labelledby="languageDropdown"] {
+        min-width: 120px;
+    }
+}
+
+/* Dark mode specific adjustments */
+.dark .dropdown-menu[aria-labelledby="languageDropdown"] {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
